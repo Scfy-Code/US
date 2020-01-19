@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{define "head"}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/plugins/bootstrap/css/bootstrap.min.css">
+    {{end}}
+</head>
+
+<body>
+    {{define "foot"}}
+    <script type="text/javascript" src="/static/plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/static/plugins/popper/popper.min.js"></script>
+    <script type="text/javascript" src="/static/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {{end}}
+</body>
+
+</html>

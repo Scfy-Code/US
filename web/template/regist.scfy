@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    {{template "head"}}
+    <link type="text/css" rel="stylesheet" href="/static/bussiness/account/regist/regist.css">
+    <title>注册</title>
+</head>
+
+<body>
+    <div id="regist" class="bg-light">
+        <form id="registForm" action="{{.action}}" method="post">
+            <h3 class="text-primary text-center">用户注册</h3>
+            <div class="form-group mb-4 mt-4">
+                <input class="form-control-lg form-control" type="email" id="email" name="email" placeholder="邮箱地址"
+                    onblur="checkEmail(this,/^$/)" required>
+                <div class="invalid-feedback" id="emailMsg"></div>
+            </div>
+            <div class="form-group mb-4">
+                <input class="form-control-lg form-control" type="password" id="password" name="password"
+                    placeholder="登陆密码" onblur="checkPassword(this,/^$/)" required>
+                <div class="invalid-feedback" id="passwordMsg"></div>
+            </div>
+            <div class="form-group mb-4">
+                <input class="form-control-lg form-control" type="password" id="password0" name="password0"
+                    placeholder="登陆密码" onblur="checkPassword0(this)" required>
+                <div class="invalid-feedback" id="passwordMsg0"></div>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary btn-lg mb-4">注册</button>
+            <a class="float-left" href="/login.scfy">登录</a>
+            <a class="float-right" href="/reset.scfy">找回密码</a>
+        </form>
+    </div>
+    {{template "foot"}}
+    <script type="text/javascript" src="/static/bussiness/account/regist/regist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    {{template "head"}}
+    <link type="text/css" rel="stylesheet" href="/static/bussiness/account/login/login.css">
+    <title>登录</title>
+</head>
+
+<body>
+    <div id="login" class="bg-light">
+        <form id="loginForm" action="{{.action}}" method="post" onsubmit="return vaild(/^$/,/^$/)">
+            <h3 class="h3 text-primary text-center">用户登录</h3>
+            <div id="msg">{{.msg}}</div>
+            <div class="form-group mb-4 mt-4">
+                <input class="form-control-lg form-control" type="email" id="email" name="email" placeholder="邮箱地址"
+                    onblur="checkEmail(/^$/)" required>
+                <div class="invalid-feedback" id="emailMsg"></div>
+            </div>
+            <div class="form-group mb-4">
+                <input class="form-control-lg form-control" type="password" id="password" name="password"
+                    placeholder="登陆密码" onblur="checkPassword(/^$/)" required>
+                <div class="invalid-feedback" id="passwordMsg"></div>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary btn-lg mb-4">登录</button>
+
+            <a class="float-left" href="/regist.scfy">注册</a>
+            <a class="float-right" href="/reset.scfy">找回密码</a>
+        </form>
+    </div>
+    {{template "foot"}}
+    <script type="text/javascript" src="/static/bussiness/account/login/login.js"></script>
+</body>
+
+</html>
